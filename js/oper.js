@@ -1,24 +1,44 @@
-/* ===== MENÚ MÓVIL ===== */
+/* ===== INICIALIZACIÓN DE LUCIDE ICONS ===== */
+function initLucide() {
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initLucide();
+
+    /* ===== MENÚ MÓVIL ===== */
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            
+            // Cambiar icono
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                const isOpen = navLinks.classList.contains('active');
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
         });
 
         // Cerrar menú al hacer clic en un enlace
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                menuToggle.textContent = '☰';
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
             });
         });
     }
 
-    /* ===== ACORDEÓN (para reglas.html) ===== */
+    /* ===== ACORDEÓN ===== */
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
     accordionHeaders.forEach(header => {
@@ -26,12 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = header.parentElement;
             const isActive = item.classList.contains('active');
 
-            // Cerrar todos los demás
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
             });
 
-            // Abrir el actual si no estaba activo
             if (!isActive) {
                 item.classList.add('active');
             }
@@ -57,20 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fadeElements.forEach(el => observer.observe(el));
 
-    /* ===== FILTROS DE CARTAS (para cartas.html) ===== */
+    /* ===== FILTROS DE CARTAS ===== */
     const filterButtons = document.querySelectorAll('.filter-btn');
     const cardItems = document.querySelectorAll('.card-item');
 
     if (filterButtons.length > 0) {
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Cambiar botón activo
                 filterButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 const filter = btn.dataset.filter;
 
-                // Filtrar cartas
                 cardItems.forEach(card => {
                     if (filter === 'todas' || card.dataset.type === filter) {
                         card.style.display = 'block';
@@ -83,38 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ===== CONTADOR ANIMADO (opcional) ===== */
-    const counters = document.querySelectorAll('.counter');
-    
-    if (counters.length > 0) {
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const target = +counter.dataset.target;
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-                    let current = 0;
-
-                    const updateCounter = () => {
-                        current += increment;
-                        if (current < target) {
-                            counter.textContent = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    };
-
-                    updateCounter();
-                    counterObserver.unobserve(counter);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => counterObserver.observe(counter));
-    }
-
     /* ===== AÑO DINÁMICO EN FOOTER ===== */
     const footerBottom = document.querySelector('.footer-bottom p');
     if (footerBottom) {
@@ -123,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* ===== FUNCIÓN PARA RESALTAR ENLACE ACTIVO ===== */
+/* ===== RESALTAR ENLACE ACTIVO ===== */
 function setActiveLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-links a');
@@ -138,5 +122,4 @@ function setActiveLink() {
     });
 }
 
-// Ejecutar al cargar
 setActiveLink();

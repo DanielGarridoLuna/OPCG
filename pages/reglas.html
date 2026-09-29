@@ -6,6 +6,7 @@
     <title>Reglas - ONE PIECE CARD GAME</title>
     <link rel="stylesheet" href="../css/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <header class="header">
@@ -13,35 +14,37 @@
             <div class="logo">
                 <h1>ONE PIECE <span>TCG</span></h1>
             </div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <i data-lucide="menu"></i>
+            </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="reglas.html" class="active">Reglas</a></li>
-                <li><a href="cartas.html">Cartas</a></li>
-                <li><a href="mazos.html">Mazos</a></li>
+                <li><a href="../index.html"><i data-lucide="home"></i> Inicio</a></li>
+                <li><a href="reglas.html" class="active"><i data-lucide="book-open"></i> Reglas</a></li>
+                <li><a href="cartas.html"><i data-lucide="layers"></i> Cartas</a></li>
+                <li><a href="mazos.html"><i data-lucide="package"></i> Mazos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-header">
+    <section class="page-header" style="background-image: url('https://images6.alphacoders.com/132/1328971.jpeg');">
         <h1>Reglas del Juego</h1>
         <p>Aprende a jugar ONE PIECE CARD GAME paso a paso</p>
     </section>
 
     <main class="page-content">
-        <h2>🎯 Condiciones de Victoria</h2>
+        <h2><i data-lucide="target"></i> Condiciones de Victoria</h2>
         <p>Ganas la partida de inmediato si ocurre una de estas dos cosas:</p>
         <ul>
             <li><strong>Daño directo:</strong> Atacas al Líder rival con éxito cuando este tiene 0 cartas en su zona de Vida.</li>
             <li><strong>Deck out:</strong> El mazo del rival se queda sin cartas.</li>
         </ul>
 
-        <h2>📦 Componentes del Mazo</h2>
+        <h2><i data-lucide="package"></i> Componentes del Mazo</h2>
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Carta de Líder</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="crown"></i> Carta de Líder</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Define los colores de tu mazo y tus puntos de vida (generalmente 4 o 5). Se coloca boca arriba desde el inicio de la partida. Solo puedes incluir cartas del mismo color que tu Líder.</p>
@@ -49,8 +52,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Mazo Principal (50 cartas)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="library"></i> Mazo Principal (50 cartas)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Compuesto por cartas de <strong>Personaje</strong>, <strong>Evento</strong> y <strong>Escenario</strong>. Solo puedes incluir cartas del mismo color que tu Líder, y un máximo de 4 copias de la misma carta (mismo número de carta).</p>
@@ -58,8 +61,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Mazo de DON!! (10 cartas)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="gem"></i> Mazo de DON!! (10 cartas)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Son la fuente de recursos. Cada turno añades automáticamente 2 cartas de tu mazo DON!! a tu área de coste (la primera ronda el jugador inicial solo añade 1).</p>
@@ -67,12 +70,12 @@
             </div>
         </div>
 
-        <h2>⚔️ Mecánicas Clave</h2>
+        <h2><i data-lucide="swords"></i> Mecánicas Clave</h2>
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Sistema de DON!!</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="zap"></i> Sistema de DON!!</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Estas cartas sirven para dos cosas:</p>
@@ -85,8 +88,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>Combate</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="crossed-swords"></i> Combate</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Para atacar, declaras un atacante (que debe estar activo) y eliges un objetivo (el Líder rival o un Personaje en estado de reposo). El defensor puede usar <strong>Contadores</strong> (cartas de la mano con valor de Counter) o efectos para aumentar el poder de su carta.</p>
@@ -95,12 +98,12 @@
             </div>
         </div>
 
-        <h2>📅 Fases del Turno</h2>
+        <h2><i data-lucide="rotate-cw"></i> Fases del Turno</h2>
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>1. Refresh (Refresco)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="refresh-cw"></i> 1. Refresh (Refresco)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Enderezas tus cartas y recuperas las DON!! que habías usado.</p>
@@ -108,8 +111,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>2. Draw (Robo)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="download"></i> 2. Draw (Robo)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Robas 1 carta del mazo principal.</p>
@@ -117,8 +120,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>3. DON!!</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="gem"></i> 3. DON!!</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Pones 2 cartas de tu mazo DON!! en el área de coste.</p>
@@ -126,8 +129,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>4. Main (Principal)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="play"></i> 4. Main (Principal)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Juegas cartas, usas efectos y declaras ataques.</p>
@@ -135,8 +138,8 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
-                    <span>5. End (Final)</span>
-                    <span class="icon">+</span>
+                    <span><i data-lucide="flag"></i> 5. End (Final)</span>
+                    <span class="icon"><i data-lucide="plus"></i></span>
                 </div>
                 <div class="accordion-content">
                     <p>Termina tu turno.</p>
@@ -154,11 +157,20 @@
             <div class="footer-section">
                 <h3>Enlaces</h3>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="reglas.html">Reglas</a></li>
-                    <li><a href="cartas.html">Cartas</a></li>
-                    <li><a href="mazos.html">Mazos</a></li>
+                    <li><a href="../index.html"><i data-lucide="chevron-right"></i> Inicio</a></li>
+                    <li><a href="reglas.html"><i data-lucide="chevron-right"></i> Reglas</a></li>
+                    <li><a href="cartas.html"><i data-lucide="chevron-right"></i> Cartas</a></li>
+                    <li><a href="mazos.html"><i data-lucide="chevron-right"></i> Mazos</a></li>
                 </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i data-lucide="message-circle"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">

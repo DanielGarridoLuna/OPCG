@@ -6,6 +6,8 @@
     <title>ONE PIECE CARD GAME - Inicio</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <header class="header">
@@ -13,23 +15,30 @@
             <div class="logo">
                 <h1>ONE PIECE <span>TCG</span></h1>
             </div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <i data-lucide="menu"></i>
+            </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="pages/reglas.html">Reglas</a></li>
-                <li><a href="pages/cartas.html">Cartas</a></li>
-                <li><a href="pages/mazos.html">Mazos</a></li>
+                <li><a href="index.html" class="active"><i data-lucide="home"></i> Inicio</a></li>
+                <li><a href="pages/reglas.html"><i data-lucide="book-open"></i> Reglas</a></li>
+                <li><a href="pages/cartas.html"><i data-lucide="layers"></i> Cartas</a></li>
+                <li><a href="pages/mazos.html"><i data-lucide="package"></i> Mazos</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h2>¡Conviértete en el Rey de los Piratas!</h2>
             <p>El juego de cartas coleccionables oficial de ONE PIECE. Construye tu tripulación, domina los mares y derrota a tus rivales.</p>
             <div class="hero-buttons">
-                <a href="pages/reglas.html" class="btn btn-primary">Aprender a Jugar</a>
-                <a href="pages/cartas.html" class="btn btn-secondary">Ver Cartas</a>
+                <a href="pages/reglas.html" class="btn btn-primary">
+                    <i data-lucide="play-circle"></i> Aprender a Jugar
+                </a>
+                <a href="pages/cartas.html" class="btn btn-secondary">
+                    <i data-lucide="eye"></i> Ver Cartas
+                </a>
             </div>
         </div>
     </section>
@@ -37,23 +46,31 @@
     <section class="features">
         <h2 class="section-title">¿Por qué jugar ONE PIECE TCG?</h2>
         <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚔️</div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i data-lucide="swords"></i>
+                </div>
                 <h3>Combate Estratégico</h3>
                 <p>Usa las cartas DON!! para potenciar a tus personajes y superar a tus rivales en combate.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏴‍☠️</div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i data-lucide="flag"></i>
+                </div>
                 <h3>Tripulaciones Icónicas</h3>
                 <p>Juega con Luffy, Zoro, Nami y todos tus personajes favoritos del anime.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i data-lucide="target"></i>
+                </div>
                 <h3>Fácil de Aprender</h3>
                 <p>Reglas sencillas pero con profundidad estratégica para jugadores de todos los niveles.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i data-lucide="trophy"></i>
+                </div>
                 <h3>Torneos Oficiales</h3>
                 <p>Participa en torneos locales y regionales organizados por Bandai.</p>
             </div>
@@ -64,30 +81,44 @@
         <div class="info-container">
             <h2 class="section-title">Conceptos Básicos</h2>
             <div class="info-grid">
-                <div class="info-item">
-                    <h3>🃏 Carta de Líder</h3>
+                <div class="info-item fade-in">
+                    <i data-lucide="crown" class="info-icon"></i>
+                    <h3>Carta de Líder</h3>
                     <p>Define los colores de tu mazo y tus puntos de vida. Se coloca boca arriba al inicio.</p>
                 </div>
-                <div class="info-item">
-                    <h3>📚 Mazo Principal</h3>
+                <div class="info-item fade-in">
+                    <i data-lucide="library" class="info-icon"></i>
+                    <h3>Mazo Principal</h3>
                     <p>50 cartas de Personaje, Evento y Escenario. Solo del color de tu Líder.</p>
                 </div>
-                <div class="info-item">
-                    <h3>💎 Mazo DON!!</h3>
+                <div class="info-item fade-in">
+                    <i data-lucide="gem" class="info-icon"></i>
+                    <h3>Mazo DON!!</h3>
                     <p>10 cartas de recursos. Cada turno añades 2 automáticamente.</p>
                 </div>
-                <div class="info-item">
-                    <h3>❤️ Zona de Vida</h3>
+                <div class="info-item fade-in">
+                    <i data-lucide="heart" class="info-icon"></i>
+                    <h3>Zona de Vida</h3>
                     <p>Generalmente 4 o 5 cartas. Pierdes cuando llegas a 0 y te atacan de nuevo.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="character-banner">
+        <img src="https://i.imgur.com/8Y4YQ9P.jpg" alt="Tripulación de los Sombrero de Paja" class="banner-image">
+        <div class="banner-content">
+            <h2>Únete a la Tripulación</h2>
+            <p>Vive la aventura del anime en cada partida</p>
+        </div>
+    </section>
+
     <section class="cta-section">
         <h2>¿Listo para zarpar?</h2>
         <p>Comienza tu aventura en el mundo de ONE PIECE CARD GAME</p>
-        <a href="pages/reglas.html" class="btn btn-primary">Empezar Ahora</a>
+        <a href="pages/reglas.html" class="btn btn-primary">
+            <i data-lucide="anchor"></i> Empezar Ahora
+        </a>
     </section>
 
     <footer class="footer">
@@ -99,15 +130,20 @@
             <div class="footer-section">
                 <h3>Enlaces</h3>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/reglas.html">Reglas</a></li>
-                    <li><a href="pages/cartas.html">Cartas</a></li>
-                    <li><a href="pages/mazos.html">Mazos</a></li>
+                    <li><a href="index.html"><i data-lucide="chevron-right"></i> Inicio</a></li>
+                    <li><a href="pages/reglas.html"><i data-lucide="chevron-right"></i> Reglas</a></li>
+                    <li><a href="pages/cartas.html"><i data-lucide="chevron-right"></i> Cartas</a></li>
+                    <li><a href="pages/mazos.html"><i data-lucide="chevron-right"></i> Mazos</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Síguenos</h3>
-                <p>Comparte tus mazos y estrategias con la comunidad.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i data-lucide="message-circle"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
