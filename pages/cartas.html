@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas - ONE PIECE CARD GAME</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ONE PIECE <span>TCG</span></h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="reglas.html">Reglas</a></li>
+                <li><a href="cartas.html" class="active">Cartas</a></li>
+                <li><a href="mazos.html">Mazos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Galería de Cartas</h1>
+        <p>Explora las cartas más icónicas del juego</p>
+    </section>
+
+    <main class="page-content">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="todas">Todas</button>
+            <button class="filter-btn" data-filter="lider">Líderes</button>
+            <button class="filter-btn" data-filter="personaje">Personajes</button>
+            <button class="filter-btn" data-filter="evento">Eventos</button>
+            <button class="filter-btn" data-filter="escenario">Escenarios</button>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card-item fade-in" data-type="lider">
+                <div class="card-image">🏴‍☠️</div>
+                <div class="card-info">
+                    <h3>Monkey D. Luffy</h3>
+                    <span class="card-type">Líder</span>
+                    <span class="card-color color-rojo">Rojo</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="lider">
+                <div class="card-image">⚔️</div>
+                <div class="card-info">
+                    <h3>Roronoa Zoro</h3>
+                    <span class="card-type">Líder</span>
+                    <span class="card-color color-verde">Verde</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="lider">
+                <div class="card-image">🍊</div>
+                <div class="card-info">
+                    <h3>Nami</h3>
+                    <span class="card-type">Líder</span>
+                    <span class="card-color color-azul">Azul</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="personaje">
+                <div class="card-image">👒</div>
+                <div class="card-info">
+                    <h3>Luffy (Gear 5)</h3>
+                    <span class="card-type">Personaje</span>
+                    <span class="card-color color-morado">Morado</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="personaje">
+                <div class="card-image">🗡️</div>
+                <div class="card-info">
+                    <h3>Zoro (Enma)</h3>
+                    <span class="card-type">Personaje</span>
+                    <span class="card-color color-verde">Verde</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="personaje">
+                <div class="card-image">🔥</div>
+                <div class="card-info">
+                    <h3>Portgas D. Ace</h3>
+                    <span class="card-type">Personaje</span>
+                    <span class="card-color color-rojo">Rojo</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="personaje">
+                <div class="card-image">❄️</div>
+                <div class="card-info">
+                    <h3>Aokiji Kuzan</h3>
+                    <span class="card-type">Personaje</span>
+                    <span class="card-color color-azul">Azul</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="evento">
+                <div class="card-image">⚡</div>
+                <div class="card-info">
+                    <h3>Gum-Gum Red Roc</h3>
+                    <span class="card-type">Evento</span>
+                    <span class="card-color color-rojo">Rojo</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="evento">
+                <div class="card-image">🌊</div>
+                <div class="card-info">
+                    <h3>Thunder Bagua</h3>
+                    <span class="card-type">Evento</span>
+                    <span class="card-color color-morado">Morado</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="escenario">
+                <div class="card-image">🏝️</div>
+                <div class="card-info">
+                    <h3>Thousand Sunny</h3>
+                    <span class="card-type">Escenario</span>
+                    <span class="card-color color-azul">Azul</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="escenario">
+                <div class="card-image">🏛️</div>
+                <div class="card-info">
+                    <h3>Marineford</h3>
+                    <span class="card-type">Escenario</span>
+                    <span class="card-color color-negro">Negro</span>
+                </div>
+            </div>
+            <div class="card-item fade-in" data-type="lider">
+                <div class="card-image">🎩</div>
+                <div class="card-info">
+                    <h3>Shanks</h3>
+                    <span class="card-type">Líder</span>
+                    <span class="card-color color-rojo">Rojo</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ONE PIECE TCG</h3>
+                <p>Sitio de fans no oficial. ONE PIECE es una marca registrada de Eiichiro Oda, Shueisha y Toei Animation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="reglas.html">Reglas</a></li>
+                    <li><a href="cartas.html">Cartas</a></li>
+                    <li><a href="mazos.html">Mazos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ONE PIECE TCG Fan Site. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/oper.js"></script>
+</body>
+</html>

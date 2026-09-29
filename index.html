@@ -1,18 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunes</title>
+    <title>ONE PIECE CARD GAME - Inicio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ONE PIECE <span>TCG</span></h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="pages/reglas.html">Reglas</a></li>
+                <li><a href="pages/cartas.html">Cartas</a></li>
+                <li><a href="pages/mazos.html">Mazos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div>
-<img src="https://images6.alphacoders.com/131/thumb-1920-1316459.png" width="100%" alt="Lunes">
-    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>¡Conviértete en el Rey de los Piratas!</h2>
+            <p>El juego de cartas coleccionables oficial de ONE PIECE. Construye tu tripulación, domina los mares y derrota a tus rivales.</p>
+            <div class="hero-buttons">
+                <a href="pages/reglas.html" class="btn btn-primary">Aprender a Jugar</a>
+                <a href="pages/cartas.html" class="btn btn-secondary">Ver Cartas</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="features">
+        <h2 class="section-title">¿Por qué jugar ONE PIECE TCG?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚔️</div>
+                <h3>Combate Estratégico</h3>
+                <p>Usa las cartas DON!! para potenciar a tus personajes y superar a tus rivales en combate.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏴‍☠️</div>
+                <h3>Tripulaciones Icónicas</h3>
+                <p>Juega con Luffy, Zoro, Nami y todos tus personajes favoritos del anime.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Fácil de Aprender</h3>
+                <p>Reglas sencillas pero con profundidad estratégica para jugadores de todos los niveles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Torneos Oficiales</h3>
+                <p>Participa en torneos locales y regionales organizados por Bandai.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <h2 class="section-title">Conceptos Básicos</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>🃏 Carta de Líder</h3>
+                    <p>Define los colores de tu mazo y tus puntos de vida. Se coloca boca arriba al inicio.</p>
+                </div>
+                <div class="info-item">
+                    <h3>📚 Mazo Principal</h3>
+                    <p>50 cartas de Personaje, Evento y Escenario. Solo del color de tu Líder.</p>
+                </div>
+                <div class="info-item">
+                    <h3>💎 Mazo DON!!</h3>
+                    <p>10 cartas de recursos. Cada turno añades 2 automáticamente.</p>
+                </div>
+                <div class="info-item">
+                    <h3>❤️ Zona de Vida</h3>
+                    <p>Generalmente 4 o 5 cartas. Pierdes cuando llegas a 0 y te atacan de nuevo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>¿Listo para zarpar?</h2>
+        <p>Comienza tu aventura en el mundo de ONE PIECE CARD GAME</p>
+        <a href="pages/reglas.html" class="btn btn-primary">Empezar Ahora</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ONE PIECE TCG</h3>
+                <p>Sitio de fans no oficial. ONE PIECE es una marca registrada de Eiichiro Oda, Shueisha y Toei Animation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/reglas.html">Reglas</a></li>
+                    <li><a href="pages/cartas.html">Cartas</a></li>
+                    <li><a href="pages/mazos.html">Mazos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <p>Comparte tus mazos y estrategias con la comunidad.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ONE PIECE TCG Fan Site. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/oper.js"></script>
 </body>
-
 </html>
